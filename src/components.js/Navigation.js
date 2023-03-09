@@ -17,7 +17,7 @@ const Navigation = () => {
                 </Typography>
                 <ul className="nav-list">
                     <li className="nav-list-item">
-                        <Link to="/">Home</Link>
+                        <Link to="/">Listings</Link>
                     </li>
                 
                 </ul>
