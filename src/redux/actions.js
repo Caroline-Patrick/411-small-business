@@ -1,4 +1,6 @@
-const url = "https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json"
+import dotenv from ‘dotenv’;
+dotenv.config()
+
 
 export const addBusiness = (business) => {
     return {
@@ -14,11 +16,14 @@ export const removeBusiness = (index) => {
     }
 }
 
-export const fetchMakes = () => {
+export const fetchBusinesses = () => {
     return (dispatch) => {
-        fetch(url)
+        
+        fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name%2Crating%2Cformatted_phone_number&key=${KEY}`)
+
         .then((res) => res.json())
         .then((response) => {
+            console.log(response)
             const action = {
                 type: 'FETCH_BUSINESSES',
                 value: response.Results,

@@ -16,18 +16,18 @@ const businesses = (state = [], action) => {
     }
 }
 // probably need to adjust this..
-const makes = (state = [], action) => {
+const fetches = (state = [], action) => {
     switch(action.type) {
         case 'FETCH_BUSINESSES':
             return action.value
             break;
-        case 'DELETE_BUSINESSES':
-            const makes = [...state]
-            makes.splice(action.value, 1)
-            return makes
+        // case 'DELETE_BUSINESSES':
+        //     const makes = [...state]
+        //     makes.splice(action.value, 1)
+        //     return makes
         default:
             return state
     }
 }
 
-export default combineReducers({ user, businesses, makes })
+export default combineReducers({ user, businesses, fetches })

@@ -7,28 +7,33 @@ export default {
         {
            "id": 1,
            "name":"El Chilito",
-           "location": "Austin, TX"
+           "location": "Austin, TX",
+           "description": "Tacos"
         },
         {
            "id": 2,
            "name":"Taco Deli",
-           "location": "Austin, TX"
+           "location": "Austin, TX",
+           "description": "Tacos"
         
         },
         {
            "id": 3,
            "name":"El Chile",
-           "location": "Austin, TX"
+           "location": "Austin, TX",
+           "description": "Tacos"
         },
         {
            "id": 4,
            "name":"Mi Madres",
-           "location": "Austin, TX"
+           "location": "Austin, TX",
+           "description": "Tacos"
         },
         {
            "id": 5,
            "name":"Hank's",
-           "location": "Austin, TX"
+           "location": "Austin, TX",
+           "description": "Tacos"
         },
         {
            "id": 6,
@@ -136,6 +141,6 @@ export default {
            "horsepower":225
         }
     ],
-    makes: []
+    fetches: []
   };
   
