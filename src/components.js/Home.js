@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Business from './Business'
 
 
 
@@ -34,14 +35,14 @@ const Home = (props) => {
                 sx={{ '&:last-child td, &:last-child th': { border: 1 } }}
               >
                 <TableCell component="th" scope="row">
-                  {business.name}
+                  {/* {business.name} */}
                   <CardActions style={{ color: 'mediumblue' }}>
-                      <Link to={`/Map/${business.name}`}>{business.name}</Link>
+                      <Link to={`/Map/${business.name}`}>{<Business/>}</Link>
                  </CardActions>
                 </TableCell>
                 <TableCell align="right">{business.location}</TableCell>
-                <TableCell align="right">{business.location}</TableCell>
-                <TableCell align="right">{business.location}</TableCell>
+                {/* <TableCell align="right">{business.location}</TableCell>
+                <TableCell align="right">{business.location}</TableCell> */}
               </TableRow>
             ))}
           </TableBody>

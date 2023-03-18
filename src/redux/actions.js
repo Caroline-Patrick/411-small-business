@@ -1,5 +1,6 @@
-import dotenv from ‘dotenv’;
+import dotenv from 'dotenv';
 dotenv.config()
+const KEY =process.env.TOKEN;
 
 
 export const addBusiness = (business) => {
@@ -29,7 +30,10 @@ export const fetchBusinesses = () => {
                 value: response.Results,
             };
             dispatch(action);
-        });
+        }).catch((error) => {
+            // Handle the error here
+            console.error('Error fetching businesses:', error);
+        })
     };
 };
 
